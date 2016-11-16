@@ -46,8 +46,8 @@ public class YelpService {
             String jsonData = response.body().string();
             if(response.isSuccessful()) {
                 JSONObject yelpJSON = new JSONObject(jsonData);
-                JSONArray businessJSON = yelpJSON.getJSONArray("business");
-                for(int i = 0; i < businessJSON.length(); i++) {
+                JSONArray businessJSON = yelpJSON.getJSONArray("businesses");
+                for (int i = 0; i < businessJSON.length(); i++) {
                     JSONObject restaurantJSON = businessJSON.getJSONObject(i);
                     String name = restaurantJSON.getString("name");
                     String phone = restaurantJSON.optString("display_phone", "Phone not available");
