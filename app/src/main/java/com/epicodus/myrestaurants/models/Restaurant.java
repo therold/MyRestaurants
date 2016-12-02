@@ -3,6 +3,7 @@ package com.epicodus.myrestaurants.models;
 import org.parceler.Parcel;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by tim on 11/11/16.
@@ -10,66 +11,66 @@ import java.util.ArrayList;
 
 @Parcel
 public class Restaurant {
-    private String mName;
-    private String mPhone;
-    private String mWebsite;
-    private double mRating;
-    private String mImageUrl;
-    private ArrayList<String> mAddress = new ArrayList<>();
-    private double mLatitude;
-    private double mLongitude;
-    private ArrayList<String> mCategories = new ArrayList<>();
+    private String Name;
+    private String Phone;
+    private String Website;
+    private double Rating;
+    private String ImageUrl;
+    private List<String> Address = new ArrayList<>();
+    private double Latitude;
+    private double Longitude;
+    private List<String> Categories = new ArrayList<>();
 
     public Restaurant() {}
 
     public Restaurant(String name, String phone, String website,
                       double rating, String imageUrl, ArrayList<String> address,
                       double latitude, double longitude, ArrayList<String> categories) {
-        this.mName = name;
-        this.mPhone = phone;
-        this.mWebsite = website;
-        this.mRating = rating;
-        this.mImageUrl = getLargeImageUrl(imageUrl);
-        this.mAddress = address;
-        this.mLatitude = latitude;
-        this.mLongitude = longitude;
-        this.mCategories = categories;
+        this.Name = name;
+        this.Phone = phone;
+        this.Website = website;
+        this.Rating = rating;
+        this.ImageUrl = getLargeImageUrl(imageUrl);
+        this.Address = address;
+        this.Latitude = latitude;
+        this.Longitude = longitude;
+        this.Categories = categories;
     }
 
     public String getName() {
-        return mName;
+        return Name;
     }
 
     public String getPhone() {
-        return mPhone;
+        return Phone;
     }
 
     public String getWebsite() {
-        return  mWebsite;
+        return  Website;
     }
 
     public double getRating() {
-        return mRating;
+        return Rating;
     }
 
     public String getImageUrl(){
-        return mImageUrl;
+        return ImageUrl;
     }
 
-    public ArrayList<String> getAddress() {
-        return mAddress;
+    public List<String> getAddress() {
+        return Address;
     }
 
     public double getLatitude() {
-        return mLatitude;
+        return Latitude;
     }
 
     public double getLongitude() {
-        return mLongitude;
+        return Longitude;
     }
 
-    public ArrayList<String> getCategories() {
-        return mCategories;
+    public List<String> getCategories() {
+        return Categories;
     }
 
     public String getLargeImageUrl(String imageUrl) {
